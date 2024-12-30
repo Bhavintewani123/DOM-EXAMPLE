@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation Example</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="header">Hello, DOM!</h1>
+  <button id="changeButton">Change Text</button>
+  <button id="highlightButton">Highlight Text</button>
+  
+  <script>
+    // Access elements
+    const header = document.getElementById('header');
+    const changeButton = document.getElementById('changeButton');
+    const highlightButton = document.getElementById('highlightButton');
+
+    // Add event listeners
+    changeButton.addEventListener('click', () => {
+      header.textContent = 'Text Changed!';
+    });
+
+    highlightButton.addEventListener('click', () => {
+      header.classList.toggle('highlight');
+    });
+  </script>
+</body>
+</html>
